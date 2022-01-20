@@ -1,0 +1,66 @@
+.waiter {
+  display: grid;
+  grid-template-rows: 35% 65%;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.appLogo {
+  width: 400px;
+  height: 400px;
+}
+
+.boxWhite {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.boxMenu,
+.boxOrder {
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.inputsNames {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.inputClient,
+.inputWaiter {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  padding-left: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.664);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #fab85e;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+}
+
+.names {
+  position: relative;
+  left: -3.5%;
+}
+
+.inputs {
+  width: 470px;
+  height: 26px;
+  font-family: "Baloo Bhai 2";
+}

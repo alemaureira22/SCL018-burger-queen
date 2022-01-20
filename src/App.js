@@ -1,4 +1,4 @@
-import { PrincipalPage } from './templates/waiter.js';
+import { PrincipalPage } from './components/waiter.js';
 import { Route, Routes } from 'react-router-dom';
 
 const App = ()=> {
