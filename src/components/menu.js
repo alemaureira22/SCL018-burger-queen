@@ -1,10 +1,12 @@
-import React from "react";
+/* eslint-disable default-case */
+import React, { useState, useContext } from "react";
 import data from "./data/menu.json";
 import styles from "./css/menu.module.css";
-import { useState } from "react/cjs/react.development";
+import { Context } from "./context"
 
 const Menu = () => {
   const dataMenu = data.productos;
+  const globalContext = useContext(Context);
 
   const Button = dataMenu.filter((element) => element.type === "Desayuno");
   const [product, changeProduct] = useState(Button);
@@ -51,9 +53,11 @@ const Menu = () => {
       <div className={styles.boxMenu}>
         {product.map((e) => (
           <div key={e.id}>
-            <button className={styles.products}>
-              {e.name}
-              {e.price}
+            <button className={styles.products}
+              onClick={() => globalContext.onAdd(e)}
+            >
+              <p className={styles.nameProduct}>{e.name}</p>
+              <p className={styles.priceProduct}>{e.price}</p>
             </button>
           </div>
         ))}

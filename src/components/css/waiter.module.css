@@ -1,26 +1,28 @@
 .waiter {
   display: grid;
   grid-template-rows: 35% 65%;
-  gap: 20px;
+  grid-template-columns: 98%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
 .logo {
   display: flex;
   justify-content: center;
-  margin-top: -70px;
+  margin-top: 1%;
 }
 
 .appLogo {
-  width: 400px;
-  height: 400px;
+  width: 29.28vw;
+  height: 64vh;
 }
 
 .boxWhite {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: -10%;
 }
 
 .boxMenu,
@@ -28,24 +30,26 @@
   background-color: white;
   border-radius: 10px;
   font-weight: bold;
+  width: 45%;
+  height: 65.6vh;
 }
 
 .inputsNames {
-  margin: 20px;
+  margin: 1%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 6%;
 }
 
 .inputClient,
 .inputWaiter {
   display: flex;
   flex-direction: row;
-  height: 30px;
-  padding-left: 40px;
+  height: 4.8vh;
   border: 1px solid rgba(0, 0, 0, 0.664);
-  margin-bottom: 20px;
+  margin-bottom: 4%;
   border-radius: 5px;
   background-color: #fab85e;
   justify-content: center;
@@ -54,13 +58,67 @@
   font-weight: bold;
 }
 
-.names {
-  position: relative;
-  left: -3.5%;
+.inputClient{
+  padding-left: 5.5%;
+}
+
+.inputWaiter{
+  padding-left: 3%;
+}
+
+.names{
+ position: relative;
+ left: -5%;
+ font-size: 1em;
 }
 
 .inputs {
-  width: 470px;
-  height: 26px;
+  width: 19.76vw;
+  height: 4.48vh;
   font-family: "Baloo Bhai 2";
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.inputsTable{
+  width: 5.12vw;
+  height: 4.48vh;
+  font-family: "Baloo Bhai 2";
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.textOrder{
+  margin-top: 1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.orderBy{
+  font-size: 0.85em;
+  margin-right: 7%;
+}
+
+.containerOrderBy,
+.containerOrderByClient{
+display: flex;
+flex-direction: column;
+margin-right: 1%;
+align-items: center;
+width: 150px;
+justify-content: center;
+}
+
+
+.result{
+  font-size: 1.07em;
+  font-weight: bolder;
+  margin-top: -14%;
+}
+
+.total{
+  position: relative;
+  right: -20%;
+  font-size: 1.15em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
