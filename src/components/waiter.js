@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import logo from "../imagenes/logo.png";
 import Menu from "./menu";
 import styles from "./css/waiter.module.css";
@@ -8,13 +8,22 @@ import TotalCount from "./totalCount";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+import { Link } from 'react-router-dom';
+
+
+
+
+
+
 
 export const Waiter = () => {
   const globalContext = useContext(Context);
   const MySwal = withReactContent(Swal)
 
+  
+
   //revisar bien ya que no funciona al 100%
-  const sendOrder = ()=>{
+  /*const sendOrder = ()=>{
     if(globalContext.client === '' || globalContext.table === '' ){
       MySwal.fire({
         title: 'Ups...',
@@ -37,24 +46,33 @@ export const Waiter = () => {
             'Enviado',
             'El pedido ha sido enviado a Cocina',
             'success'
+
           )
         }
+       
       })
     }
-  }
+  }*/
 
-  const onChange = (e) => { 
+   const onChange = (e) => { 
     if (e.target.name === "client") {
       globalContext.changeClient(e.target.value);
     } else if (e.target.name === "table") {
       globalContext.changeTable(e.target.value);
     } 
   };
+
+ 
   return (
+
     <>
       <div className={styles.waiter}>
         <header className={styles.logo}>
           <img src={logo} className={styles.appLogo} alt="logo" />
+          <div className={styles.containerLink}>
+            <Link to="/" className={styles.link}>Volver a Home</Link>
+          </div>
+
         </header>
         <section className={styles.boxWhite}>
           <section className={styles.boxMenu}>
@@ -108,7 +126,7 @@ export const Waiter = () => {
             <div className={styles.boxButton}>
             <button 
             className={styles.orderButton}
-            onClick={()=> sendOrder()}
+            onClick={()=> globalContext.resumeOrder()}
             >
               Enviar Pedido</button>
             </div>
@@ -117,4 +135,5 @@ export const Waiter = () => {
       </div>
     </>
   );
+  
 };

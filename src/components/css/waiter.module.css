@@ -125,14 +125,14 @@
   margin-right: 8%;
 }
 
-.boxButton{
+.boxButton {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-top: 2%;
 }
 
-.orderButton{
+.orderButton {
   display: flex;
   height: 6.4vh;
   width: 13.17vw;
@@ -149,8 +149,15 @@
   cursor: pointer;
 }
 
-.orderButton:hover{
+.orderButton:hover {
   background: #df3047;
   box-shadow: 0 4px 12px rgb(223, 167, 129);
   transition: all 0.2s ease;
+}
+.containerLink {
+  position: absolute;
+  left: 2%;
+  top: 5%;
+}
+.link {
 }

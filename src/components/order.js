@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React,{ useContext } from "react";
 import { Context } from "./context";
 import food from "../imagenes/food.png";
 import styles from "./css/order.module.css";
 
 const Order = () => {
   const globalContext = useContext(Context);
+  
 
   return (
     <>

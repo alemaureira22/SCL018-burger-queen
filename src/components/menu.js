@@ -1,5 +1,5 @@
 /* eslint-disable default-case */
-import React, { useState, useContext } from "react";
+import React,{ useState, useContext } from "react";
 import data from "./data/menu.json";
 import styles from "./css/menu.module.css";
 import { Context } from "./context";

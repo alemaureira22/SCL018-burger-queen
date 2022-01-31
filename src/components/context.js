@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-// import data from './data/menu.json'
+import {collection, addDoc} from "firebase/firestore"
+import {db, app} from "../firebase"
+
 
 //creamos un contexto que es igual al estado global
 const Context = React.createContext();
@@ -53,7 +55,28 @@ const Provider = ({children}) => {
         return a + c.price * c.qty}, 0);
         
 
-    const props = {client, changeClient, table, changeTable, onAdd, onRemove, products, setProducts, removeProducts, itemsPrice}
+    
+   
+    const resumeOrder = async(e)=>{
+    
+        try{
+          await addDoc(collection(db, "Orders"),{
+            client:client,
+            table:table,
+            total:itemsPrice,
+            order:products,
+            date: new Date(),
+    
+           
+          })
+        }catch(error){
+          console.log("errores")
+          console.log(error);
+        }
+      }
+
+      const props = {client, changeClient, table, changeTable, onAdd, onRemove, products, setProducts, removeProducts, itemsPrice,resumeOrder}
+
 
     return (
         <Context.Provider value={props}>
