@@ -24,6 +24,8 @@
 
 .buttonsMenu:hover {
   background: #df3047;
+  box-shadow: 0 4px 12px rgb(223, 167, 129);
+  transition: all 0.2s ease;
 }
 .boxMenu {
   display: flex;

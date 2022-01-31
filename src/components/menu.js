@@ -1,8 +1,8 @@
 /* eslint-disable default-case */
-import React, { useState, useContext } from "react";
+import React,{ useState, useContext } from "react";
 import data from "./data/menu.json";
 import styles from "./css/menu.module.css";
-import { Context } from "./context"
+import { Context } from "./context";
 
 const Menu = () => {
   const dataMenu = data.productos;
@@ -53,11 +53,12 @@ const Menu = () => {
       <div className={styles.boxMenu}>
         {product.map((e) => (
           <div key={e.id}>
-            <button className={styles.products}
+            <button
+              className={styles.products}
               onClick={() => globalContext.onAdd(e)}
             >
               <p className={styles.nameProduct}>{e.name}</p>
-              <p className={styles.priceProduct}>{e.price}</p>
+              <p className={styles.priceProduct}>${e.price}</p>
             </button>
           </div>
         ))}

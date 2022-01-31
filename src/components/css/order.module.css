@@ -1,0 +1,88 @@
+
+.boxText{
+   margin: 5%;
+   margin-bottom: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.text{
+    font-size: 1.3em;
+}
+
+.containerProducts{
+    height: 40.9vh;
+    overflow-y: auto;
+}
+
+.boxOrder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    width: 50%;
+    height: 6.4vh;
+    font-size: 1em;
+    font-weight: normal;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.plusLess{
+border: none;
+width: 50px;
+height: 40px;
+font-size: 1.4em;
+background-color: #fab85e;
+border-radius: 5px; 
+cursor: pointer;
+}
+
+.plusLess:hover{
+   
+    background-color: #eb9114;
+    
+}
+
+.number{
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 1em;
+}
+
+.x{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #ed7586;
+font-size: 1.7em;
+width: 3.29vw;
+height: 6.4vh;
+border-radius: 5px;
+cursor: pointer;
+border: none;
+
+}
+
+.x:hover{
+    background-color: #df3047;
+}
+
+
