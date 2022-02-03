@@ -1,5 +1,5 @@
 /* eslint-disable default-case */
-import React,{ useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import data from "./data/menu.json";
 import styles from "./css/menu.module.css";
 import { Context } from "./context";
@@ -14,16 +14,13 @@ const Menu = () => {
   const typeProduct = (option) => {
     switch (option) {
       case "Desayuno":
-        const breakFast = dataMenu.filter((element) => element.type === option);
-        changeProduct(breakFast);
+        changeProduct(dataMenu.filter((element) => element.type === option));
         break;
       case "Principal":
-        const principal = dataMenu.filter((element) => element.type === option);
-        changeProduct(principal);
+        changeProduct(dataMenu.filter((element) => element.type === option));
         break;
       case "Bebestibles":
-        const drinks = dataMenu.filter((element) => element.type === option);
-        changeProduct(drinks);
+        changeProduct(dataMenu.filter((element) => element.type === option));
         break;
     }
   };

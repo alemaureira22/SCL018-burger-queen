@@ -1,80 +1,77 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import logo from "../imagenes/logo.png";
 import Menu from "./menu";
 import styles from "./css/waiter.module.css";
 import { Context } from "./context";
 import Order from "./order";
 import TotalCount from "./totalCount";
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
-
-import { Link } from 'react-router-dom';
-
-
-
-
-
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import { Link } from "react-router-dom";
 
 export const Waiter = () => {
   const globalContext = useContext(Context);
-  const MySwal = withReactContent(Swal)
-
-  
+  const MySwal = withReactContent(Swal);
 
   //revisar bien ya que no funciona al 100%
-  /*const sendOrder = ()=>{
-    if(globalContext.client === '' || globalContext.table === '' ){
+  const sendOrder = () => {
+    if (globalContext.client === "" || globalContext.table === "") {
       MySwal.fire({
-        title: 'Ups...',
-        text: 'Creo que olvidaste escribir el nombre o mesa del cliente',
-        icon: 'error'
-      })
-    }else{
+        title: "Ups...",
+        text: "Creo que olvidaste escribir el nombre o mesa del cliente",
+        icon: "error",
+      });
+    } else if (globalContext.products.length === 0) {
+      MySwal.fire({
+        title: "Espera un momento!",
+        text: "No has ingresado productos al pedido",
+        icon: "error",
+      });
+    } else {
       Swal.fire({
-        title: '¿Deseas confirmar el pedido?',
+        title: "¿Deseas confirmar el pedido?",
         text: "Si tienes dudas, consúltalo con el cliente",
-        icon: 'warning',
+        icon: "warning",
         showCancelButton: true,
-        cancelButtonText: 'Cancelar',
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Confirmar'
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Confirmar",
       }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire(
-            'Enviado',
-            'El pedido ha sido enviado a Cocina',
-            'success'
-
-          )
+          Swal.fire("Enviado", "El pedido ha sido enviado a Cocina", "success");
+          globalContext.resumeOrder();
+          globalContext.setProducts([]);
+          globalContext.changeClient("");
+          globalContext.changeTable("");
         }
-       
-      })
+      });
     }
-  }*/
+  };
 
-   const onChange = (e) => { 
+  const onChange = (e) => {
     if (e.target.name === "client") {
       globalContext.changeClient(e.target.value);
     } else if (e.target.name === "table") {
       globalContext.changeTable(e.target.value);
-    } 
+    }
   };
 
- 
   return (
-
-    <>
       <div className={styles.waiter}>
         <header className={styles.logo}>
           <img src={logo} className={styles.appLogo} alt="logo" />
           <div className={styles.containerLink}>
-            <Link to="/" className={styles.link}>Volver a Home</Link>
+            <Link to="/">
+              <img
+                src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-web-homepage-button-to-redirects-at-main-page-basic-tritone-tal-revivo.png"
+                alt="home"
+                className={styles.return}
+              />
+            </Link>
           </div>
-
         </header>
-        <section className={styles.boxWhite}>
+        <main className={styles.boxWhite}>
           <section className={styles.boxMenu}>
             <div className={styles.inputsNames}>
               <div className={styles.inputClient}>
@@ -102,7 +99,7 @@ export const Waiter = () => {
                 />
               </div>
             </div>
-            <Menu></Menu>
+            <Menu />
           </section>
           <section className={styles.boxOrder}>
             <div className={styles.textOrder}>
@@ -117,23 +114,22 @@ export const Waiter = () => {
                 </div>
               </div>
               <div className={styles.totalCount}>
-                <TotalCount></TotalCount>
+                <TotalCount />
               </div>
             </div>
             <div>
-              <Order></Order>
+              <Order />
             </div>
             <div className={styles.boxButton}>
-            <button 
-            className={styles.orderButton}
-            onClick={()=> globalContext.resumeOrder()}
-            >
-              Enviar Pedido</button>
+              <button
+                className={styles.orderButton}
+                onClick={() => sendOrder()}
+              >
+                Enviar Pedido
+              </button>
             </div>
           </section>
-        </section>
+        </main>
       </div>
-    </>
   );
-  
 };

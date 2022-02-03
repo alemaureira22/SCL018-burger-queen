@@ -15,7 +15,7 @@
 
 .appLogo {
   width: 29.28vw;
-  height: 64vh;
+  height: auto;
 }
 
 .boxWhite {
@@ -111,7 +111,7 @@
   flex-direction: column;
   margin-right: 1%;
   align-items: center;
-  width: 150px;
+  width: 10.98vw;
   justify-content: center;
 }
 
@@ -156,8 +156,102 @@
 }
 .containerLink {
   position: absolute;
-  left: 2%;
+  left: 4%;
   top: 5%;
 }
-.link {
+
+.return {
+  height: auto;
+  width: 35px;
+}
+
+.return:hover {
+  box-shadow: 0 1px 7px rgb(185, 87, 21);
+  transition: all 0.2s ease;
+}
+
+/*--- --- RESPONSIVE TABLETS --- ---*/
+
+@media screen and (max-width: 1024px) {
+  .appLogo {
+    width: 38.28vw;
+    height: auto;
+  }
+
+  .boxWhite {
+    margin-top: -12%;
+  }
+
+  .boxMenu,
+  .boxOrder {
+    height: 67.6vh;
+  }
+
+  .orderButton {
+    margin: 1%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .appLogo {
+    width: 54.28vw;
+    height: auto;
+    margin-top: -7%;
+  }
+
+  .boxWhite {
+    margin-top: -15%;
+  }
+
+  .boxMenu,
+  .boxOrder {
+    height: 70.6vh;
+    width: 47%;
+  }
+
+  .inputClient,
+  .inputWaiter {
+    height: 3.8vh;
+  }
+
+  .inputClient {
+    margin-top: 4%;
+  }
+
+  .inputs,
+  .inputsTable {
+    width: 20.76vw;
+    height: 3.58vh;
+  }
+
+  .inputsNames {
+    flex-direction: column;
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
+
+  .textOrder {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+  }
+
+  .boxClient {
+    width: 28.62vw;
+    margin-left: 5%;
+    justify-content: space-between;
+    margin-bottom: -5%;
+  }
+
+  .totalCount {
+    margin-bottom: 5%;
+  }
+
+  .boxButton {
+    margin-top: 4%;
+  }
+
+  .orderButton {
+    width: 20.17vw;
+  }
 }

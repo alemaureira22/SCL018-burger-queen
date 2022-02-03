@@ -1,41 +1,27 @@
-import React,{ useState, useEffect} from "react";
-import {db} from "../firebase"
-import {collection, onSnapshot} from "firebase/firestore"
+import React from "react";
+import logo from "../imagenes/logo.png";
+import styles from "./css/kitchen.module.css";
+import { Link } from "react-router-dom";
+import KitchenOrder from "./kitchenOrder";
 
-
-
-export const Kitchen = ()=>{
-    const [order, changeOrder]= useState([]);
-
-    useEffect(()=>{
-        onSnapshot(
-            collection(db,'Orders'),
-            (snapshot) =>{
-                const products = snapshot.docs.map((documento) => {
-                    return {...document.data(),id:documento.id}
-                })
-                changeOrder(products);
-            }
-        );
-    }, []);
-
-    return(
-        <div>
-            {order.map((order)=>(
-                <main>
-                    <div>
-                        <p>{order.cliente}</p>
-                    </div>
-                    <div>
-                        <li>{order.order}</li>
-                        <p>{order.total}</p>
-                        <p>{order.estado}</p>
-                    </div>
-                </main>
-            ))}
+export const Kitchen = () => {
+  return (
+    <div className={styles.containerKitchen}>
+      <header className={styles.logo}>
+        <img src={logo} className={styles.appLogo} alt="logo" />
+        <div className={styles.containerLink}>
+          <Link to="/">
+            <img
+              src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-web-homepage-button-to-redirects-at-main-page-basic-tritone-tal-revivo.png"
+              alt="home"
+              className={styles.return}
+            />
+          </Link>
         </div>
-    )
-           
-            }  
-
-
+      </header>
+      <main className={styles.containerOrders}>
+        <KitchenOrder />
+      </main>
+    </div>
+  );
+};

@@ -27,6 +27,7 @@
   box-shadow: 0 4px 12px rgb(223, 167, 129);
   transition: all 0.2s ease;
 }
+
 .boxMenu {
   display: flex;
   flex-direction: column;
@@ -59,4 +60,29 @@
 
 .nameProduct {
   margin-right: 3%;
+}
+
+/*--- --- RESPONSIVE TABLETS --- ---*/
+
+@media screen and (max-width: 1024px) {
+  .boxMenu {
+    height: 42.6vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Buttons {
+    margin-bottom: 8%;
+    width: 350px;
+  }
+
+  .boxMenu {
+    height: 46.6vh;
+  }
+
+  .products {
+    width: 33.28vw;
+    height: 4.6vh;
+    margin-bottom: 7%;
+  }
 }

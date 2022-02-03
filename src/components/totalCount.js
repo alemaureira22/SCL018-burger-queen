@@ -1,4 +1,4 @@
-import React,{ useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "./context";
 import styles from "./css/totalCount.module.css";
 
