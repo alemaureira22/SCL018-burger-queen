@@ -1,0 +1,142 @@
+.containerHome {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+}
+
+.sectionHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.315);
+  height: 90%;
+  width: 90%;
+  margin-top: 7%;
+  border-radius: 10px;
+  border: 2px dashed white;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: black;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 4px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 34.4vw;
+  height: 50vh;
+  margin-bottom: 5%;
+}
+
+.buttonWaiter,
+.buttonCooker {
+  display: flex;
+  flex-direction: row;
+  width: 19.76vw;
+  height: 16vh;
+  justify-content: space-evenly;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 10px 10px;
+  font-size: 1.8em;
+  font-family: "Baloo Bhai 2";
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 3px;
+}
+
+.buttonCooker {
+  margin-bottom: 8%;
+}
+
+.img {
+  width: 5.85vw;
+  height: auto;
+}
+
+/*--- --- RESPONSIVE TABLETS --- ---*/
+
+@media screen and (max-width: 1024px) {
+  .containerHome {
+    gap: 3%;
+  }
+
+  .logo {
+    margin-top: 12%;
+  }
+
+  .sectionHome {
+    height: 90%;
+    margin-top: 24%;
+    width: 85%;
+  }
+
+  .title {
+    margin-top: 8%;
+    font-size: 2em;
+    letter-spacing: 3px;
+  }
+
+  .buttonWaiter,
+  .buttonCooker {
+    width: 24.76vw;
+    height: 15vh;
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerHome {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+    width: 100%;
+    height: 100%;
+    gap: 1%;
+    justify-items: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .sectionHome {
+    height: 70%;
+    width: 70%;
+    margin-top: -17%;
+    justify-content: center;
+  }
+
+  .buttonWaiter,
+  .buttonCooker {
+    width: 40.76vw;
+    height: 11vh;
+    font-size: 1.8em;
+  }
+
+  .img {
+    width: 8.85vw;
+    height: auto;
+  }
+}

@@ -1,0 +1,124 @@
+.containerOrders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 65.6vh;
+  width: 100%;
+  overflow-y: auto;
+  justify-content: center;
+}
+
+.boxOrders {
+  background-color: white;
+  margin-right: 2%;
+  margin-left: 2%;
+  width: 25.62vw;
+  height: 59.2vh;
+  margin-bottom: 2%;
+  border-radius: 10px;
+}
+
+.text {
+  margin-right: 2%;
+  margin-left: 2%;
+  height: 51vh;
+  overflow-y: auto;
+}
+
+.orderBy {
+  text-align: center;
+}
+
+.line {
+  display: flex;
+  margin-top: -3%;
+  color: black;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.clientName {
+  margin-left: 3%;
+  margin-top: 6%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: -5%;
+}
+
+.table {
+  display: flex;
+  width: 23vw;
+  justify-content: space-between;
+}
+
+.trName {
+  width: 14.64vw;
+}
+
+.trQty {
+  width: 4.75vw;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.title1 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  left: 34%;
+  top: 55%;
+}
+
+.title2 {
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 2px;
+}
+
+.goodJob {
+  width: 60px;
+  height: auto;
+}
+
+/*--- --- RESPONSIVE TABLETS --- ---*/
+
+@media screen and (max-width: 1024px) {
+  .title1 {
+    left: 29%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerOrders {
+    height: 72vh;
+  }
+
+  .boxOrders {
+    width: 43vw;
+    height: 43.2vh;
+  }
+
+  .text {
+    height: 35vh;
+  }
+
+  .table {
+    width: 35vw;
+  }
+
+  .title1 {
+    left: 23%;
+  }
+}
