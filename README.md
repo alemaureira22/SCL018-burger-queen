@@ -1,7 +1,7 @@
-# La Burguersita 
+# La Burgersita 
 
 ## Resumen del proyecto
-Nuestra app esta desarrollada para el local de hamburguesas "La Burguersita" donde la principal función es facilitar la interacción entre meserxs y cocinerxs ante los pedidos de los clientes. 
+Nuestra app esta desarrollada para el local de hamburguesas "La Burgersita" donde la principal función es facilitar la interacción entre meserxs y cocinerxs ante los pedidos de los clientes. 
 
 ## Interfaz de la Aplicación
 Diseñada para utilizar en dispositivos tablets y de escritorio ya que son los más utilizados en restaurantes y locales de comida. 
@@ -23,7 +23,7 @@ Nuestro proyecto se basó en dos Historias de Usuarios:
 ### Planificación
 Para la planificación del proyecto y en base a las historias de usuarios detalladas, utilizamos GitHub Proyects
 
-[Proyecto Burger Queen - La Burguersita](https://github.com/MacarenaRivera/SCL018-burger-queen/projects/1)
+[Proyecto Burger Queen - La Burgersita](https://github.com/MacarenaRivera/SCL018-burger-queen/projects/1)
 
 
 ### Diseño 
@@ -37,4 +37,26 @@ Luego, realizamos los prototipos de alta fidelidad en Figma en base a la Histori
 
 ![Prototipo de alta fidelidad](src/imagenes/prototipoaf2.png)
 
+## Condiciones Generales
+
+### Informe de Lighthouse
+Nuestra app fue testeada obteniendo los siguientes resultados;
+
+![Lighthouse](src/imagenes/lighthouse.png)
+
+### Herramientas utilizadas
+* React
+* JavaScript
+* Css
+* Html
+* Firebase
+* Sweetalert2
+* Sweetalert2-react-content
+
+### Creadoras
+Esta aplicación fue desarrollada por Alejandra Maureira y Macarena Rivera.
+
+### Link de Página web
+
+[La Burgersita](https://burger-queen-ma-22d5b.web.app/)
 
