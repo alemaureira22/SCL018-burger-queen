@@ -154,20 +154,26 @@
   box-shadow: 0 4px 12px rgb(223, 167, 129);
   transition: all 0.2s ease;
 }
-.containerLink {
+
+.return {
+  height: auto;
+  width: 35px;
   position: absolute;
   left: 4%;
   top: 5%;
 }
 
-.return {
-  height: auto;
-  width: 35px;
-}
-
 .return:hover {
   box-shadow: 0 1px 7px rgb(185, 87, 21);
   transition: all 0.2s ease;
+}
+
+.kitchen {
+  height: auto;
+  width: 50px;
+  position: absolute;
+  right: 4%;
+  top: 3%;
 }
 
 /*--- --- RESPONSIVE TABLETS --- ---*/

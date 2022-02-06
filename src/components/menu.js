@@ -4,6 +4,7 @@ import data from "./data/menu.json";
 import styles from "./css/menu.module.css";
 import { Context } from "./context";
 
+//Componente para despliegue de menú en página de meserx
 const Menu = () => {
   const dataMenu = data.productos;
   const globalContext = useContext(Context);
@@ -11,6 +12,7 @@ const Menu = () => {
   const Button = dataMenu.filter((element) => element.type === "Desayuno");
   const [product, changeProduct] = useState(Button);
 
+  //Función para filtrar por tipo los productos del menú
   const typeProduct = (option) => {
     switch (option) {
       case "Desayuno":

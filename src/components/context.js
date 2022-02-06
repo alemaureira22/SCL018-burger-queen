@@ -1,18 +1,19 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../firebase";
 
 //creamos un contexto que es igual al estado global
 const Context = React.createContext();
 
-const Provider = ({children}) => {
-  //estado global para obtener el nombre del cliente y mesa
+const Provider = ({ children }) => {
+  //estado para obtener el nombre del cliente y mesa
   const [client, changeClient] = useState("");
   const [table, changeTable] = useState("");
 
-  //estado global para añadir productos al pedido
+  //estado para añadir productos al pedido
   const [products, setProducts] = useState([]);
+
   //Función para añadir productos al carro y aumentar cantidad
   const onAdd = (product) => {
     const exist = products.find((item) => item.id === product.id);
@@ -54,7 +55,7 @@ const Provider = ({children}) => {
     return a + c.price * c.qty;
   }, 0);
 
-  //Función para subir orden de cliente a Firestore
+  //Función para guardar orden de cliente a Firestore
   const resumeOrder = async () => {
     try {
       await addDoc(collection(db, "Orders"), {
@@ -63,11 +64,16 @@ const Provider = ({children}) => {
         total: itemsPrice,
         order: products,
         date: new Date(),
+        status: "Pendiente",
       });
     } catch (error) {
-      console.log("errores");
-      console.log(error);
+      throw new Error("Error al guardar el pedido");
     }
+  };
+
+  //Función para borrar pedidos
+  const deleteOrder = async (id) => {
+    await deleteDoc(doc(db, "Orders", id));
   };
 
   const props = {
@@ -82,6 +88,7 @@ const Provider = ({children}) => {
     removeProducts,
     itemsPrice,
     resumeOrder,
+    deleteOrder,
   };
 
   return <Context.Provider value={props}>{children}</Context.Provider>;

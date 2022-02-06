@@ -1,10 +1,7 @@
 .containerKitchen {
-  display: grid;
-  grid-template-rows: 30% 70%;
-  grid-template-columns: 98%;
-  width: 100%;
-  height: 100%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 98.5%;
 }
 
 .containerLink {
@@ -16,22 +13,19 @@
 .logo {
   display: flex;
   justify-content: center;
-  margin-top: 3%;
+  align-items: center;
 }
 
 .appLogo {
   display: flex;
   width: 28.28vw;
   height: 63vh;
+  margin-top: -5%;
 }
 
 .containerOrders {
   display: flex;
-  height: 64vh;
-  overflow-y: auto;
-  width: 98%;
-  flex-direction: row;
-  margin-top: -8%;
+  margin-top: -9.5%;
 }
 
 .return {
@@ -42,4 +36,39 @@
 .return:hover {
   box-shadow: 0 1px 7px rgb(185, 87, 21);
   transition: all 0.2s ease;
+}
+
+/*--- --- RESPONSIVE TABLETS --- ---*/
+
+@media screen and (max-width: 1024px) {
+  .appLogo {
+    width: 43.28vw;
+    height: 63vh;
+    margin-top: -7%;
+  }
+
+  .containerOrders {
+    margin-top: -14%;
+  }
+
+  .containerLink {
+    left: 3.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .appLogo {
+    width: 56.28vw;
+    height: auto;
+    margin-top: -8%;
+  }
+
+  .containerOrders {
+    margin-top: -16.5%;
+  }
+
+  .containerLink {
+    left: 5%;
+    top: 4%;
+  }
 }

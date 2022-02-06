@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import styles from "./css/kitchenOrders.module.css";
+import KitchenButtons from "./kitchenButtons";
 
+//Componente para visualizar los pedidos en cocina
 const KitchenOrder = () => {
+  //Estado de las ordenes
   const [orders, changeOrders] = useState([]);
 
+  //Función para acceder a la base de datos de Firestore y ordenar pedidos
   useEffect(() => {
     onSnapshot(
-      query(collection(db, "Orders"), orderBy("date", "desc")),
+      query(collection(db, "Orders"), orderBy("date", "asc")),
       (snapshot) => {
         const products = snapshot.docs.map((doc) => {
           return { ...doc.data(), id: doc.id };
@@ -22,13 +26,14 @@ const KitchenOrder = () => {
   }, []);
 
   return (
-    <div className={styles.kitchenOrderContainer}>
+    <>
       {orders.length > 0 ? (
         <section className={styles.containerOrders}>
           {orders.map((order) => (
             <div key={order.id} className={styles.boxOrders}>
               <div className={styles.text}>
                 <h3 className={styles.orderBy}>Pedido Mesa {order.table}</h3>
+                <hr className={styles.line} />
                 <p className={styles.clientName}>
                   Nombre Cliente: {order.client}
                 </p>
@@ -53,15 +58,21 @@ const KitchenOrder = () => {
                   ))}
                 </div>
               </div>
+              <KitchenButtons id={order.id} status={order.status} />
             </div>
           ))}
         </section>
       ) : (
-        <div className={styles.titleContainer}>
+        <div className={styles.title1}>
           <h1 className={styles.title2}>NO HAY PEDIDOS PENDIENTES</h1>
+          <img
+            src="https://img.icons8.com/external-tulpahn-outline-color-tulpahn/64/000000/external-happy-emotion-tulpahn-outline-color-tulpahn.png"
+            alt="good job"
+            className={styles.goodJob}
+          />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

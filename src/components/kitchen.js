@@ -4,6 +4,7 @@ import styles from "./css/kitchen.module.css";
 import { Link } from "react-router-dom";
 import KitchenOrder from "./kitchenOrder";
 
+//Componente para despliegue de la página de cocina
 export const Kitchen = () => {
   return (
     <div className={styles.containerKitchen}>

@@ -3,9 +3,9 @@ import logo from "../imagenes/logo.png";
 import waiter from "../imagenes/waiter.png";
 import chef from "../imagenes/chef.png";
 import styles from "./css/home.module.css";
-
 import { Link } from "react-router-dom";
 
+//Componente de Página principal
 export const Home = () => {
   return (
     <div className={styles.containerHome}>
@@ -14,7 +14,7 @@ export const Home = () => {
       </figure>
       <section className={styles.sectionHome}>
         <div>
-          <h2 className={styles.title}>Selecciona una opción</h2>
+          <h1 className={styles.title}>Selecciona una opción</h1>
         </div>
         <div className={styles.buttons}>
           <Link to="/waiter" className={styles.buttonWaiter}>

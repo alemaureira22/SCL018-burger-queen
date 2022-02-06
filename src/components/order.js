@@ -3,6 +3,7 @@ import { Context } from "./context";
 import food from "../imagenes/food.png";
 import styles from "./css/order.module.css";
 
+//Componente para añadir productos al pedido
 const Order = () => {
   const globalContext = useContext(Context);
 
