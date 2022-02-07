@@ -23,7 +23,7 @@ Nuestro proyecto se basó en dos Historias de Usuarios:
 ### Planificación
 Para la planificación del proyecto y en base a las historias de usuarios detalladas, utilizamos GitHub Proyects
 
-[Proyecto Burger Queen - La Burgersita](https://github.com/MacarenaRivera/SCL018-burger-queen/projects/1)
+[Proyecto Burger Queen - La Burgersita](https://github.com/alemaureira22/SCL018-burger-queen/projects/2)
 
 
 ### Diseño 
