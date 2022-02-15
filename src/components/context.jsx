@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import { collection, addDoc, deleteDoc, doc } from "firebase/firestore";
+import { collection, addDoc} from "firebase/firestore";
 import { db } from "../firebase";
 
 //creamos un contexto que es igual al estado global
@@ -71,11 +71,6 @@ const Provider = ({ children }) => {
     }
   };
 
-  //Función para borrar pedidos
-  const deleteOrder = async (id) => {
-    await deleteDoc(doc(db, "Orders", id));
-  };
-
   const props = {
     client,
     changeClient,
@@ -87,8 +82,7 @@ const Provider = ({ children }) => {
     setProducts,
     removeProducts,
     itemsPrice,
-    resumeOrder,
-    deleteOrder,
+    resumeOrder
   };
 
   return <Context.Provider value={props}>{children}</Context.Provider>;

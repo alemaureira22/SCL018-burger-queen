@@ -14,22 +14,12 @@ const Menu = () => {
 
   //Función para filtrar por tipo los productos del menú
   const typeProduct = (option) => {
-    switch (option) {
-      case "Desayuno":
-        changeProduct(dataMenu.filter((element) => element.type === option));
-        break;
-      case "Principal":
-        changeProduct(dataMenu.filter((element) => element.type === option));
-        break;
-      case "Bebestibles":
-        changeProduct(dataMenu.filter((element) => element.type === option));
-        break;
-    }
+    changeProduct(dataMenu.filter((element) => element.type === option));
   };
 
   return (
-    <>
-      <div className={styles.Buttons}>
+    <section>
+      <nav className={styles.Buttons}>
         <button
           onClick={() => typeProduct("Desayuno")}
           className={styles.buttonsMenu}
@@ -48,8 +38,8 @@ const Menu = () => {
         >
           Bebestibles
         </button>
-      </div>
-      <div className={styles.boxMenu}>
+      </nav>
+      <section className={styles.boxMenu}>
         {product.map((e) => (
           <div key={e.id}>
             <button
@@ -61,8 +51,8 @@ const Menu = () => {
             </button>
           </div>
         ))}
-      </div>
-    </>
+      </section>
+    </section>
   );
 };
 
