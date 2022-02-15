@@ -1,0 +1,100 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "name": "Café americano",
+      "price": "1500",
+      "type": "Desayuno"
+    },
+    {
+      "id": "2",
+      "name": "Café con leche",
+      "price": "2500",
+      "type": "Desayuno"
+    },
+    {
+      "id": "3",
+      "name": "Sandwich de jamón y queso",
+      "price": "3000",
+      "type": "Desayuno"
+    },
+    {
+      "id": "4",
+      "name": "Jugo de frutas natural",
+      "price": "2800",
+      "type": "Desayuno"
+    },
+    {
+      "id": "5",
+      "name": "Hamburguesa de Carne",
+      "price": "3000",
+      "type": "Principal"
+    },
+    {
+      "id": "6",
+      "name": "Hamburguesa de Pollo",
+      "price": "3500",
+      "type": "Principal"
+    },
+    {
+      "id": "7",
+      "name": "Hamburguesa Veggie",
+      "price": "3000",
+      "type": "Principal"
+    },
+    {
+      "id": "8",
+      "name": "Hamburguesa de la casa",
+      "price": "3000",
+      "type": "Principal"
+    },
+    {
+      "id": "9",
+      "name": "Papas fritas",
+      "price": "1000",
+      "type": "Principal"
+    },
+    {
+      "id": "10",
+      "name": "Empanadas (3 und)",
+      "price": "1500",
+      "type": "Principal"
+    },
+    {
+      "id": "11",
+      "name": "Aros de cebolla",
+      "price": "1000",
+      "type": "Principal"
+    },
+    {
+      "id": "12",
+      "name": "Agrandar acompañamientos",
+      "price": "500",
+      "type": "Principal"
+    },
+    {
+      "id": "13",
+      "name": "Agua 500ml",
+      "price": "1000",
+      "type": "Bebestibles"
+    },
+    {
+      "id": "14",
+      "name": "Agua 750ml",
+      "price": "1300",
+      "type": "Bebestibles"
+    },
+    {
+      "id": "15",
+      "name": "Bebida/gaseosa 500ml",
+      "price": "1500",
+      "type": "Bebestibles"
+    },
+    {
+      "id": "16",
+      "name": "Bebida/gaseosa 750ml",
+      "price": "1800",
+      "type": "Bebestibles"
+    }
+  ]
+}

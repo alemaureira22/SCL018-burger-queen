@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffa6bf;
+  font-family: "Baloo Bhai 2";
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
