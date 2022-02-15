@@ -8,25 +8,25 @@ import { Link } from "react-router-dom";
 //Componente de Página principal
 export const Home = () => {
   return (
-    <div className={styles.containerHome}>
+    <main className={styles.containerHome}>
       <figure className={styles.logo}>
         <img src={logo} alt="Logo" className={styles.appLogo} />
       </figure>
       <section className={styles.sectionHome}>
-        <div>
+        <section className={styles.section2Home}>
           <h1 className={styles.title}>Selecciona una opción</h1>
-        </div>
-        <div className={styles.buttons}>
-          <Link to="/waiter" className={styles.buttonWaiter}>
-            <img src={waiter} alt="meserx" className={styles.img} />
-            Meserx
-          </Link>
-          <Link to="/kitchen" className={styles.buttonCooker}>
-            <img src={chef} alt="chef" className={styles.img} />
-            Cocina
-          </Link>
-        </div>
+          <div className={styles.buttons}>
+            <Link to="/waiter" className={styles.buttonWaiter}>
+              <img src={waiter} alt="meserx" className={styles.img} />
+              Meserx
+            </Link>
+            <Link to="/kitchen" className={styles.buttonCooker}>
+              <img src={chef} alt="chef" className={styles.img} />
+              Cocina
+            </Link>
+          </div>
+        </section>
       </section>
-    </div>
+    </main>
   );
 };

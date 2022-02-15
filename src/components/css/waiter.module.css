@@ -1,28 +1,34 @@
 .waiter {
   display: grid;
   grid-template-rows: 35% 65%;
-  grid-template-columns: 98%;
-  width: 100%;
-  height: 100%;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  height: 100vh;
+  justify-items: center;
   align-items: center;
 }
 
 .logo {
   display: flex;
   justify-content: center;
-  margin-top: 1%;
+  width: 100vw;
+  height: 40vh;
 }
 
 .appLogo {
-  width: 29.28vw;
+  max-width: 100%;
   height: auto;
+  padding-top: 1vw;
 }
 
 .boxWhite {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
-  margin-top: -10%;
+  width: 100vw;
+  height: 70vh;
+  margin-top: -3.5vw;
 }
 
 .boxMenu,
@@ -30,26 +36,24 @@
   background-color: white;
   border-radius: 10px;
   font-weight: bold;
-  width: 45%;
-  height: 65.6vh;
+  width: 45vw;
+  height: 68vh;
 }
 
 .inputsNames {
-  margin: 1%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 6%;
+  height: 12vh;
 }
 
 .inputClient,
 .inputWaiter {
   display: flex;
   flex-direction: row;
-  height: 4.8vh;
+  height: 5vh;
   border: 1px solid rgba(0, 0, 0, 0.664);
-  margin-bottom: 4%;
   border-radius: 5px;
   background-color: #fab85e;
   justify-content: center;
@@ -59,84 +63,91 @@
 }
 
 .inputClient {
-  padding-left: 5.5%;
+  padding-left: 1.5vw;
 }
 
 .inputWaiter {
-  padding-left: 3%;
+  padding-left: 1vw;
 }
 
 .names {
   position: relative;
-  left: -5%;
-  font-size: 1em;
+  left: -0.5vw;
+  font-size: 1.2vw;
 }
 
 .inputs {
   width: 19.76vw;
-  height: 4.48vh;
+  height: 4.9vh;
   font-family: "Baloo Bhai 2";
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2vw;
 }
 
 .inputsTable {
   width: 5.12vw;
-  height: 4.48vh;
+  height: 4.9vh;
   font-family: "Baloo Bhai 2";
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2vw;
 }
 
 .textOrder {
-  margin-top: 1%;
   display: flex;
+  align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 11vh;
 }
 
 .boxClient {
   display: flex;
+  width: 25vw;
+  height: 11vh;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .orderBy {
-  font-size: 0.85em;
-  margin-right: 7%;
+  font-size: 1.07vw;
+  padding-top: 0.5vw;
+  margin: 0;
+  margin-right: 1vw;
 }
 
 .containerOrderBy,
 .containerOrderByClient {
   display: flex;
   flex-direction: column;
-  margin-right: 1%;
   align-items: center;
-  width: 10.98vw;
+  width: 11vw;
+  height: 10vh;
   justify-content: center;
 }
 
 .result {
-  font-size: 1.07em;
+  font-size: 1.2vw;
   font-weight: bolder;
-  margin-top: -14%;
+  margin: 0;
 }
 
 .totalCount {
-  margin-right: 8%;
+  font-size: 1.3vw;
+  padding-right: 2vw;
 }
 
 .boxButton {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  margin-top: 2%;
+  align-items: center;
+  height: 10vh;
 }
 
 .orderButton {
   display: flex;
   height: 6.4vh;
   width: 13.17vw;
-  font-size: 1em;
+  font-size: 1.2vw;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -157,9 +168,9 @@
 
 .return {
   height: auto;
-  width: 35px;
+  max-width: 3vw;
   position: absolute;
-  left: 4%;
+  left: 2.5%;
   top: 5%;
 }
 
@@ -170,94 +181,119 @@
 
 .kitchen {
   height: auto;
-  width: 50px;
+  max-width: 4vw;
   position: absolute;
-  right: 4%;
+  right: 3%;
   top: 3%;
 }
 
 /*--- --- RESPONSIVE TABLETS --- ---*/
+@media screen and (max-width: 1024px) and (orientation: portrait){
 
-@media screen and (max-width: 1024px) {
-  .appLogo {
-    width: 38.28vw;
-    height: auto;
+  .waiter {
+    display: grid;
+    grid-template-rows: 25% 75%;
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    height: 25vh;
   }
 
   .boxWhite {
-    margin-top: -12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+    margin-top: -7vw;
   }
 
   .boxMenu,
-  .boxOrder {
-    height: 67.6vh;
-  }
-
-  .orderButton {
-    margin: 1%;
-  }
+.boxOrder {
+  width: 80vw;
+  height: 38vh;
 }
 
-@media screen and (max-width: 768px) {
-  .appLogo {
-    width: 54.28vw;
-    height: auto;
-    margin-top: -7%;
-  }
-
-  .boxWhite {
-    margin-top: -15%;
-  }
-
-  .boxMenu,
-  .boxOrder {
-    height: 70.6vh;
-    width: 47%;
-  }
-
-  .inputClient,
-  .inputWaiter {
-    height: 3.8vh;
-  }
-
-  .inputClient {
-    margin-top: 4%;
-  }
-
-  .inputs,
-  .inputsTable {
-    width: 20.76vw;
-    height: 3.58vh;
-  }
-
-  .inputsNames {
-    flex-direction: column;
-    margin-top: 6%;
-    margin-bottom: 6%;
-  }
-
-  .textOrder {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3%;
-  }
-
-  .boxClient {
-    width: 28.62vw;
-    margin-left: 5%;
-    justify-content: space-between;
-    margin-bottom: -5%;
-  }
-
-  .totalCount {
-    margin-bottom: 5%;
-  }
-
-  .boxButton {
-    margin-top: 4%;
-  }
-
-  .orderButton {
-    width: 20.17vw;
-  }
+.inputsNames {
+  height: 7vh;
 }
+
+.inputClient,
+.inputWaiter {
+  height: 3vh;
+}
+
+.inputClient {
+  padding-left: 2.5vw;
+}
+
+.inputWaiter {
+  padding-left: 2vw;
+}
+
+.inputs {
+  width: 25vw;
+  height: 3vh;
+  font-size: 1.4vw;
+}
+
+.inputsTable {
+  width: 10vw;
+  height: 3vh;
+}
+
+.names {
+  position: relative;
+  left: -1vw;
+  font-size: 1.4vw;
+}
+
+.textOrder {
+  width: 80vw;
+  height: 6vh;
+}
+
+.boxClient {
+  width: 35vw;
+  height: 5vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.orderBy {
+  font-size: 1.4vw;
+  margin: 0;
+  margin-right: 1vw;
+}
+
+.containerOrderBy,
+.containerOrderByClient {
+  width: 11vw;
+  height: 5vh;
+}
+
+.result {
+  font-size: 1.5vw;
+}
+
+.boxButton {
+  height: 6vh;
+}
+
+.orderButton {
+  height: 4vh;
+  width: 16vw;
+  font-size: 1.4vw;
+}
+
+.return {
+  top: 4%;
+}
+
+.totalCount {
+  font-size: 1.5vw;
+}
+  
+}
+
+

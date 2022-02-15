@@ -8,12 +8,11 @@ const Order = () => {
   const globalContext = useContext(Context);
 
   return (
-    <>
-      <div>
+    <main>
         {globalContext.products.length >= 1 ? (
-          <div className={styles.containerProducts}>
+          <section className={styles.containerProducts}>
             {globalContext.products.map((item) => (
-              <div key={item.id} className={styles.boxOrder}>
+              <section key={item.id} className={styles.boxOrder}>
                 <div className={styles.products}>
                   <p>{item.name}</p>
                   <p>${item.price}</p>
@@ -39,17 +38,16 @@ const Order = () => {
                 >
                   x
                 </button>
-              </div>
+              </section>
             ))}
-          </div>
+          </section>
         ) : (
-          <div className={styles.boxText}>
+          <aside className={styles.boxText}>
             <p className={styles.text}>Agrega productos al pedido </p>
-            <img src={food} alt="food" />
-          </div>
+            <img src={food} alt="food" className={styles.food} />
+          </aside>
         )}
-      </div>
-    </>
+    </main>
   );
 };
 

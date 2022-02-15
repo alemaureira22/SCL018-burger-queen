@@ -60,7 +60,7 @@ export const Waiter = () => {
   };
 
   return (
-    <div className={styles.waiter}>
+    <section className={styles.waiter}>
       <header className={styles.logo}>
         <img src={logo} className={styles.appLogo} alt="logo" />
         <Link to="/">
@@ -111,7 +111,7 @@ export const Waiter = () => {
         </section>
         {/* -- SECCIÓN RESUMEN DE PEDIDO -- */}
         <section className={styles.boxOrder}>
-          <div className={styles.textOrder}>
+          <article className={styles.textOrder}>
             <div className={styles.boxClient}>
               <div className={styles.containerOrderByClient}>
                 <p className={styles.orderBy}>Pedido de:</p>
@@ -125,10 +125,10 @@ export const Waiter = () => {
             <div className={styles.totalCount}>
               <TotalCount />
             </div>
-          </div>
-          <div>
+          </article>
+          <section>
             <Order />
-          </div>
+          </section>
           <div className={styles.boxButton}>
             <button className={styles.orderButton} onClick={() => sendOrder()}>
               Enviar Pedido
@@ -136,6 +136,6 @@ export const Waiter = () => {
           </div>
         </section>
       </main>
-    </div>
+    </section>
   );
 };

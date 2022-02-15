@@ -1,18 +1,24 @@
 .boxText {
-  margin: 5%;
-  margin-bottom: 10%;
   display: flex;
+  height: 47vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .text {
-  font-size: 1.3em;
+  font-size: 1.6vw;
+  margin-bottom: 0;
+}
+
+.food{
+  display: flex;
+  height: auto;
+  max-width: 10vw;
 }
 
 .containerProducts {
-  height: 40.9vh;
+  height: 47vh;
   overflow-y: auto;
 }
 
@@ -21,15 +27,16 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  height: 10vh;
 }
 
 .products {
   display: flex;
   flex-direction: row;
   border: 1px solid rgba(0, 0, 0, 0.514);
-  width: 50%;
+  width: 25vw;
   height: 6.4vh;
-  font-size: 1em;
+  font-size: 1.2vw;
   font-weight: normal;
   border-radius: 5px;
   justify-content: space-evenly;
@@ -41,13 +48,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  height: 10vh;
 }
 
 .plusLess {
   border: none;
   width: 3.66vw;
   height: 6.4vh;
-  font-size: 1.4em;
+  font-size: 1.6vw;
   background-color: #fab85e;
   border-radius: 5px;
   cursor: pointer;
@@ -60,7 +68,7 @@
 .number {
   margin-left: 13%;
   margin-right: 13%;
-  font-size: 1em;
+  font-size: 1.2vw;
 }
 
 .x {
@@ -68,7 +76,7 @@
   align-items: center;
   justify-content: center;
   background-color: #ed7586;
-  font-size: 1.7em;
+  font-size: 1.9vw;
   width: 3.29vw;
   height: 6.4vh;
   border-radius: 5px;
@@ -82,40 +90,46 @@
 
 /*--- --- RESPONSIVE TABLETS --- ---*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+
+  .boxText {
+    height: 26vh;
+  }
+
   .containerProducts {
-    height: 46.5vh;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-
-  .products {
-    width: 50%;
-    height: 6.4vh;
-    font-size: 0.9em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .containerProducts {
-    height: 43.5vh;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-
-  .products {
-    width: 50%;
-    height: 7.4vh;
-    font-size: 0.9em;
+    height: 26vh;
   }
 
   .boxOrder {
-    margin-bottom: 4%;
+    height: 5vh;
   }
 
-  .plusLess,
-  .x {
-    width: 4.66vw;
-    height: 4vh;
+  .products {
+    width: 35vw;
+    height: 3.5vh;
+    font-size: 1.4vw;
   }
+
+  .buttons {
+    height: 5vh;
+  }
+
+  .plusLess {
+    width: 6vw;
+    height: 3.5vh;
+    font-size: 1.9vw;
+  }
+
+  .number {
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 1.5vw;
+  }
+
+  .x {
+    font-size: 2.3vw;
+    width: 6vw;
+    height: 3.5vh;
+  }
+
 }

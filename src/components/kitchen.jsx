@@ -7,7 +7,7 @@ import KitchenOrder from "./kitchenOrder";
 //Componente para despliegue de la página de cocina
 export const Kitchen = () => {
   return (
-    <div className={styles.containerKitchen}>
+    <section className={styles.containerKitchen}>
       <header className={styles.logo}>
         <img src={logo} className={styles.appLogo} alt="logo" />
         <div className={styles.containerLink}>
@@ -23,6 +23,6 @@ export const Kitchen = () => {
       <main className={styles.containerOrders}>
         <KitchenOrder />
       </main>
-    </div>
+    </section>
   );
 };

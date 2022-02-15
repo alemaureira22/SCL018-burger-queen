@@ -57,7 +57,7 @@ const KitchenButtons = ({ id, status }) => {
   };
 
   return (
-    <div className={styles.boxButtons}>
+    <section className={styles.boxButtons}>
       <div onClick={() => updateStatus()} className={styles.buttons}>
         {statusOrder === "Pendiente" ? (
           <button className={styles.pending}>Pendiente</button>
@@ -68,7 +68,7 @@ const KitchenButtons = ({ id, status }) => {
       <button className={styles.close} onClick={() => alert()}>
         Cerrar
       </button>
-    </div>
+    </section>
   );
 };
 

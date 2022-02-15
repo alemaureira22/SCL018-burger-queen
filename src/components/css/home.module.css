@@ -1,39 +1,54 @@
 .containerHome {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  width: 100%;
-  height: 100%;
+  grid-template-rows: 1fr;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7%;
+  width: 50vw;
+  margin: 0;
 }
 
-.sectionHome {
+.appLogo{
+  height: auto;
+  max-width: 100%;
+}
+
+.sectionHome{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+
+}
+
+.section2Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.315);
-  height: 90%;
-  width: 90%;
-  margin-top: 7%;
   border-radius: 10px;
   border: 2px dashed white;
+  height: 80vh;
+  width: 40vw;
+  padding-bottom: 3vw;
 }
 
 .title {
-  font-size: 2.5em;
+  font-size: 2.5vw;
   font-weight: bolder;
   color: black;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  letter-spacing: 4px;
+  letter-spacing: 0.35vw;
 }
 
 .buttons {
@@ -41,16 +56,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 34.4vw;
-  height: 50vh;
-  margin-bottom: 5%;
+  width: 40vw;
+  height: 45vh;
 }
 
 .buttonWaiter,
 .buttonCooker {
   display: flex;
   flex-direction: row;
-  width: 19.76vw;
+  width: 20vw;
   height: 16vh;
   justify-content: space-evenly;
   align-items: center;
@@ -58,85 +72,66 @@
   cursor: pointer;
   background-color: white;
   box-shadow: 10px 10px;
-  font-size: 1.8em;
+  font-size: 2vw;
   font-family: "Baloo Bhai 2";
   text-decoration: none;
   font-weight: bold;
   color: black;
-  letter-spacing: 3px;
-}
-
-.buttonCooker {
-  margin-bottom: 8%;
+  letter-spacing: 0.3vw;
 }
 
 .img {
-  width: 5.85vw;
+  max-width: 10vw;
   height: auto;
 }
 
 /*--- --- RESPONSIVE TABLETS --- ---*/
 
-@media screen and (max-width: 1024px) {
-  .containerHome {
-    gap: 3%;
-  }
-
-  .logo {
-    margin-top: 12%;
-  }
-
-  .sectionHome {
-    height: 90%;
-    margin-top: 24%;
-    width: 85%;
-  }
-
-  .title {
-    margin-top: 8%;
-    font-size: 2em;
-    letter-spacing: 3px;
-  }
-
-  .buttonWaiter,
-  .buttonCooker {
-    width: 24.76vw;
-    height: 15vh;
-    font-size: 1.8em;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .containerHome {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
-    width: 100%;
-    height: 100%;
-    gap: 1%;
     justify-items: center;
+    align-items: center;
   }
 
   .logo {
-    justify-content: center;
+    width: 100vw;
+    height: 40vh;
+    align-items: flex-end;
   }
 
-  .sectionHome {
-    height: 70%;
-    width: 70%;
-    margin-top: -17%;
-    justify-content: center;
+  .appLogo{
+    height: auto;
+    min-width: 58%;
   }
 
+  .sectionHome{
+    width: 100vw;
+    height: 60vh;
+  }
+
+  .section2Home {
+    height: 55vh;
+    width: 70vw;
+  }
+
+  .buttons {
+    width: 60vw;
+    height: 40vh;
+  }
+ 
   .buttonWaiter,
   .buttonCooker {
-    width: 40.76vw;
-    height: 11vh;
-    font-size: 1.8em;
+    width: 30vw;
+    height: 10vh;
   }
+}
 
-  .img {
-    width: 8.85vw;
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  .appLogo{
     height: auto;
+    max-width: 48%;
   }
 }
