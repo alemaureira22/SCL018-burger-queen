@@ -65,8 +65,7 @@
 
 /*--- --- RESPONSIVE TABLETS --- ---*/
 
-@media screen and (max-width: 1024px) and (orientation: portrait){
-
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .Buttons {
     height: 7vh;
   }
@@ -86,5 +85,4 @@
     height: 4vh;
     font-size: 1.4vw;
   }
-
 }

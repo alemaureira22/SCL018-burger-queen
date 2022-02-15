@@ -68,8 +68,7 @@
 
 /*--- --- RESPONSIVE TABLETS --- ---*/
 
-@media screen and (max-width: 1024px) and (orientation: portrait){
-
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .boxButtons {
     height: 4vh;
   }
@@ -79,13 +78,11 @@
     height: 3vh;
   }
 
-  .pending, 
+  .pending,
   .ready,
   .close {
     width: 14vw;
     height: 3vh;
     font-size: 1.4vw;
   }
-  
-  
 }

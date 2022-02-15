@@ -16,18 +16,17 @@
   margin: 0;
 }
 
-.appLogo{
+.appLogo {
   height: auto;
   max-width: 100%;
 }
 
-.sectionHome{
+.sectionHome {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50vw;
-
 }
 
 .section2Home {
@@ -102,12 +101,12 @@
     align-items: flex-end;
   }
 
-  .appLogo{
+  .appLogo {
     height: auto;
     min-width: 58%;
   }
 
-  .sectionHome{
+  .sectionHome {
     width: 100vw;
     height: 60vh;
   }
@@ -121,7 +120,7 @@
     width: 60vw;
     height: 40vh;
   }
- 
+
   .buttonWaiter,
   .buttonCooker {
     width: 30vw;
@@ -130,7 +129,7 @@
 }
 
 @media screen and (max-width: 640px) and (orientation: portrait) {
-  .appLogo{
+  .appLogo {
     height: auto;
     max-width: 48%;
   }

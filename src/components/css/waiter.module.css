@@ -188,8 +188,7 @@
 }
 
 /*--- --- RESPONSIVE TABLETS --- ---*/
-@media screen and (max-width: 1024px) and (orientation: portrait){
-
+@media screen and (max-width: 1024px) and (orientation: portrait) {
   .waiter {
     display: grid;
     grid-template-rows: 25% 75%;
@@ -209,91 +208,88 @@
   }
 
   .boxMenu,
-.boxOrder {
-  width: 80vw;
-  height: 38vh;
-}
+  .boxOrder {
+    width: 80vw;
+    height: 38vh;
+  }
 
-.inputsNames {
-  height: 7vh;
-}
+  .inputsNames {
+    height: 7vh;
+  }
 
-.inputClient,
-.inputWaiter {
-  height: 3vh;
-}
+  .inputClient,
+  .inputWaiter {
+    height: 3vh;
+  }
 
-.inputClient {
-  padding-left: 2.5vw;
-}
+  .inputClient {
+    padding-left: 2.5vw;
+  }
 
-.inputWaiter {
-  padding-left: 2vw;
-}
+  .inputWaiter {
+    padding-left: 2vw;
+  }
 
-.inputs {
-  width: 25vw;
-  height: 3vh;
-  font-size: 1.4vw;
-}
+  .inputs {
+    width: 25vw;
+    height: 3vh;
+    font-size: 1.4vw;
+  }
 
-.inputsTable {
-  width: 10vw;
-  height: 3vh;
-}
+  .inputsTable {
+    width: 10vw;
+    height: 3vh;
+  }
 
-.names {
-  position: relative;
-  left: -1vw;
-  font-size: 1.4vw;
-}
+  .names {
+    position: relative;
+    left: -1vw;
+    font-size: 1.4vw;
+  }
 
-.textOrder {
-  width: 80vw;
-  height: 6vh;
-}
+  .textOrder {
+    width: 80vw;
+    height: 6vh;
+  }
 
-.boxClient {
-  width: 35vw;
-  height: 5vh;
-  justify-content: space-around;
-  align-items: center;
-}
+  .boxClient {
+    width: 35vw;
+    height: 5vh;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.orderBy {
-  font-size: 1.4vw;
-  margin: 0;
-  margin-right: 1vw;
-}
+  .orderBy {
+    font-size: 1.4vw;
+    margin: 0;
+    margin-right: 1vw;
+  }
 
-.containerOrderBy,
-.containerOrderByClient {
-  width: 11vw;
-  height: 5vh;
-}
+  .containerOrderBy,
+  .containerOrderByClient {
+    width: 11vw;
+    height: 5vh;
+  }
 
-.result {
-  font-size: 1.5vw;
-}
+  .result {
+    font-size: 1.5vw;
+  }
 
-.boxButton {
-  height: 6vh;
-}
+  .boxButton {
+    height: 6vh;
+  }
 
-.orderButton {
-  height: 4vh;
-  width: 16vw;
-  font-size: 1.4vw;
-}
+  .orderButton {
+    height: 4vh;
+    width: 16vw;
+    font-size: 1.4vw;
+  }
 
-.return {
-  top: 4%;
-}
+  .return {
+    top: 4%;
+  }
 
-.totalCount {
-  font-size: 1.5vw;
+  .totalCount {
+    font-size: 1.5vw;
+  }
 }
-  
-}
-
-
