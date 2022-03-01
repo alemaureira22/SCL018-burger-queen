@@ -7,7 +7,7 @@ Nuestra app esta desarrollada para el local de hamburguesas "La Burgersita" dond
 ## Interfaz de la Aplicación
 
 Diseñada para utilizar en dispositivos tablets y de escritorio ya que son los más utilizados en restaurantes y locales de comida.
-La App cuenta con tres tipos de menús; Desayuno, Principal y Bebestibles. En donde se desplieguan diferentes productos, el meserx solo debe hacer click en uno de estos y se agregaran al pedido. Al enviarlo, este llega directamente a la sección de Cocina donde el chef los puede ver e ir indicando cual esta listo para servir para que el meserx pueda llevar la orden esta la mesa y cerrar el pedido.
+La App cuenta con tres tipos de menús; Desayuno, Principal y Bebestibles. En donde se desplieguan diferentes productos, el meserx solo debe hacer click en uno de estos y se agregaran al pedido. Al enviarlo, este llega directamente a la sección de Cocina donde el chef los puede ver e ir indicando cual esta listo para servir y asi el meserx pueda llevar la orden a la mesa y cerrar el pedido.
 
 ## Desarrollo de la app
 
